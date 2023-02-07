@@ -1,6 +1,5 @@
 #include<stdio.h>
 #include<conio.h>
-#include<conio.h>
 
 #define MAX_SIZE 20
 
