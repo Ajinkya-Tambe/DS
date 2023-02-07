@@ -42,7 +42,9 @@ void replaceElement(int orgNo, int newNum)
     }
 
     else
+    {
         printf("\n%d is not in the queue.", orgNo);
+    }
 
 }
 
