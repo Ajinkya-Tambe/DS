@@ -1,0 +1,19 @@
+int getMax(struct Node* root){
+    struct Node *stack[100];
+    int top = -1;
+    int max = root->data;
+    stack[++top] = root;
+    while (top >= 0) {
+        struct Node *temp = stack[top--];
+        if (temp->data > max) {
+            max = temp->data;
+        }
+        if (temp->right) {
+            stack[++top] = temp->right;
+        }
+        if (temp->left) {
+            stack[++top] = temp->left;
+        }
+    }
+    return max;
+}

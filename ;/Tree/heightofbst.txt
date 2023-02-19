@@ -1,0 +1,22 @@
+int height(struct Node* root){
+    struct Node* temp;
+    int height = 0;
+    struct Node *stack[100];
+    int top = -1;
+    stack[++top] = root;
+
+    while (top >= 0) {
+        temp = stack[top--];
+        if (temp->right != NULL) {
+            stack[++top] = temp->right;
+        }
+        if (temp->left != NULL) {
+            stack[++top] = temp->left;
+        }
+        if (top + 1 > height) {
+            height = top + 1;
+        }
+    }
+
+    return height;
+}
